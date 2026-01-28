@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike Akey - Cover Letter</title>
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&family=Georgia:wght@400;700&display=swap');
         
         * {
             margin: 0;
@@ -15,377 +15,148 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Calibri, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .cover-letter-container {
-            max-width: 978px;
+            color: #000;
+            background: #fff;
+            padding: 0.5in;
+            max-width: 8.5in;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .cover-letter-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, #e74c3c, #f39c12, #27ae60, #3498db);
         }
         
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 40px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
         }
         
         .header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         
         .header .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 2;
+            font-size: 11pt;
+            color: #333;
+            margin-bottom: 8px;
         }
         
         .contact-info {
+            font-size: 10pt;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 15px;
             flex-wrap: wrap;
-            font-size: 1rem;
-            position: relative;
-            z-index: 2;
-            margin-top: 20px;
         }
         
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .contact-info span::before {
+            content: '|';
+            margin-right: 15px;
         }
         
-        .contact-icon {
-            width: 20px;
-            height: 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-        }
-        
-        .content {
-            padding: 40px;
+        .contact-info span:first-child::before {
+            content: '';
+            margin-right: 0;
         }
         
         .date-section {
-            margin-bottom: 30px;
-            text-align: right;
-            color: #666;
+            margin-bottom: 25px;
+            font-size: 10pt;
         }
         
         .greeting {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            color: #2c3e50;
-            font-weight: 500;
+            font-size: 11pt;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
         
         .paragraph {
-            margin-bottom: 25px;
-            line-height: 1.8;
-            color: #555;
-            font-size: 1.05rem;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%);
-            border-left: 4px solid #3498db;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
-            position: relative;
-        }
-        
-        .highlight-box::before {
-            content: '💡';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .highlight-title {
-            font-weight: 600;
-            color: #2c3e50;
             margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .highlight-content {
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        .fun-fact {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border: 2px dashed #f39c12;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 25px 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .fun-fact::before {
-            content: '🎯';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 1.2rem;
-        }
-        
-        .fun-fact-text {
-            color: #8b4513;
-            font-weight: 500;
-            font-style: italic;
+            line-height: 1.6;
+            font-size: 11pt;
+            text-align: justify;
         }
         
         .closing {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
+            margin-top: 30px;
         }
         
         .signature {
-            margin-top: 30px;
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
+            margin-top: 40px;
+            font-size: 11pt;
         }
         
-
-        
-                 .links-section {
-             margin-top: 40px;
-             padding: 30px;
-             background: linear-gradient(135deg, #f8faff 0%, #e8f4fd 100%);
-             border-radius: 15px;
-             border: 2px solid #3498db;
-             text-align: center;
-         }
-         
-         .links-section h3 {
-             color: #2c3e50;
-             font-size: 1.3rem;
-             font-weight: 600;
-             margin-bottom: 20px;
-         }
-         
-         .links-section p {
-             color: #555;
-             margin-bottom: 25px;
-             font-size: 1rem;
-         }
-         
-         .links-container {
-             display: flex;
-             justify-content: center;
-             gap: 30px;
-             flex-wrap: wrap;
-         }
-         
-         .link-item {
-             background: white;
-             padding: 20px;
-             border-radius: 10px;
-             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-             min-width: 200px;
-             transition: transform 0.2s ease;
-         }
-         
-         .link-item:hover {
-             transform: translateY(-2px);
-         }
-         
-         .link-item a {
-             color: #3498db;
-             text-decoration: none;
-             font-weight: 500;
-         }
-         
-         .link-item a:hover {
-             text-decoration: underline;
-         }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .content {
-                padding: 25px;
-            }
-        }
-        
-        @page {
-            margin: 0.5in;
+        .signature-name {
+            margin-top: 10px;
+            font-weight: bold;
         }
         
         @media print {
             body {
-                background: white;
                 padding: 0;
             }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
             
-            .cover-letter-container {
-                box-shadow: none;
-                border-radius: 0;
+            .paragraph {
+                text-align: left;
             }
         }
     </style>
 </head>
 <body>
-    <div class="cover-letter-container">
-        <div class="header">
-            <h1>Mike Akey</h1>
-            <div class="subtitle">Product Manager & Problem Solver</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <span>480-253-8544</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <span>mike.akey6@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <span>Scottsdale, AZ</span>
-                </div>
-            </div>
+    <div class="header">
+        <h1>MIKE AKEY</h1>
+        <div class="contact-info">
+            <span>480-253-8544</span>
+            <span>mike.akey6@gmail.com</span>
+            <span>Scottsdale, AZ</span>
+        </div>
+    </div>
+    
+    <div class="paragraph">
+        Hi, I'm Mike!
+    </div>
+    
+    <div class="paragraph">
+        I don't just manage products; I genuinely geek out over them. Whether I'm gathering user feedback, mapping out roadmaps and customer journeys, or mentoring new PMs, I'm always chasing ways to make products more intuitive, useful, and genuinely helpful.
+    </div>
+    
+    <div class="paragraph">
+        Over the years at Alteryx, I've worn a bunch of hats across Customer Support, UX, and Product Management. That range has given me a front-row seat to how great products come to life. Not through flash or fluff, but through empathy, data, thoughtful UX, and tight collaboration with the people building and using them.
+    </div>
+    
+    <div class="paragraph">
+        I started with Alteryx back when it was a scrappy start-up, through IPO, massive growth, and acquisition. Experiencing all those stages firsthand taught me how to adapt as priorities, processes, and company culture shift; and how to keep a product moving forward no matter what's happening around it. Along the way, I've partnered closely with UX teams to shape everything from design systems to core user journeys. I'm a firm believer that great UX isn't just about polish; it's about deeply understanding real user needs and building with empathy.
+    </div>
+    
+    <div class="paragraph">
+        What gets me out of bed every morning? The thrill of turning complex problems into elegant solutions. I've led cross-functional teams through major platform integrations, managed product lifecycles from conception to launch, and built processes for scale. But here's what I'm most proud of: I've helped teams deliver features that users actually love!
+    </div>
+    
+    <div class="paragraph">
+        I'm passionate about creating products that make people's lives easier. Whether it's building intuitive user experiences, developing go-to-market strategies, or analyzing data to inform product decisions, I approach every challenge with curiosity and a commitment to excellence. I believe the best product managers are equal parts strategist, analyst, and storyteller—and I've spent the last decade honing those skills.
+    </div>
+    
+    <div class="paragraph">
+        I'm looking for an opportunity to bring my passion for product excellence to a team that values innovation, user-centric design, and data-driven decision making. I want to work somewhere where I can make a real impact, mentor others, and continue growing as a product leader.
+    </div>
+    
+        <div class="paragraph">
+            I'd love to discuss how my experience aligns with your team's needs and learn more about the challenges you're tackling. I'm excited about the possibility of contributing to your product vision and helping build something amazing together.
         </div>
         
-        <div class="content">
-            <div class="date-section">
-                <div id="current-date"></div>
-            </div>
-            
-            <div class="greeting">
-                Hi, I'm Mike!
-            </div>
-            
-            <div class="paragraph">
-                I don’t just manage products; I genuinely geek out over them. Whether I’m gathering user feedback, mapping out roadmaps and customer journeys, or mentoring new PMs, I’m always chasing ways to make products more intuitive, useful, and genuinely helpful.
-                <br>
-                <br>
-                Over the years at Alteryx, I’ve worn a bunch of hats across Customer Support, UX, and Product Management. That range has given me a front-row seat to how great products come to life. Not through flash or fluff, but through empathy, data, thoughtful UX, and tight collaboration with the people building and using them.
-            </div>
-            
-            <div class="highlight-box">
-                <div class="highlight-title">Why I'm Different</div>
-                <div class="highlight-content">
-                    I started with Alteryx back when it was a scrappy start-up, through IPO, massive growth, and acquisition. Experiencing all those stages firsthand taught me how to adapt as priorities, processes, and company culture shift; and how to keep a product moving forward no matter what’s happening around it.                    <br>
-                    <br>
-                    Along the way, I’ve partnered closely with UX teams to shape everything from design systems to core user journeys. I’m a firm believer that great UX isn’t just about polish; it’s about deeply understanding real user needs and building with empathy.
-                </div>
-            </div>
-            
-                         <div class="paragraph">
-                 What gets me out of bed every morning? The thrill of turning complex problems into elegant solutions. I've led cross-functional teams through major platform integrations, managed product lifecycles from conception to launch, and built processes for scale. But here's what I'm most proud of: I've helped teams deliver features that users actually love!
-             </div>
-             
-             <div class="paragraph">
-                I'm passionate about creating products that make people's lives easier. Whether it's building intuitive user experiences, developing go-to-market strategies, or analyzing data to inform product decisions, I approach every challenge with curiosity and a commitment to excellence. I believe the best product managers are equal parts strategist, analyst, and storyteller—and I've spent the last decade honing those skills.
-            </div>
-            
-
-            
-            <div class="paragraph">
-                I'm looking for an opportunity to bring my passion for product excellence to a team that values innovation, user-centric design, and data-driven decision making. I want to work somewhere where I can make a real impact, mentor others, and continue growing as a product leader.
-            </div>
-            
-            <div class="closing">
-                <div class="paragraph">
-                    I'd love to discuss how my experience aligns with your team's needs and learn more about the challenges you're tackling. I'm excited about the possibility of contributing to your product vision and helping build something amazing together.
-                </div>
-                
-                <div class="signature">
-                    Best regards,<br>
-                    Mike Akey
-                </div>
-            </div>             
-             <div class="links-section">
-                 <h3>🔗 Learn More About Me</h3>
-                                   <div class="links-container">
-                      <div class="link-item">
-                          <a href="https://makey06.github.io/Resume/" target="_blank">📄 View My Resume</a>
-                      </div>
-                      <div class="link-item">
-                        <a href="https://makey06.github.io/Accomplishments/" target="_blank">🏆 Some Of My Accomplishments</a>
-                    </div>
-                      <div class="link-item">
-                          <a href="https://www.linkedin.com/in/mikeakey6" target="_blank">💼 Connect on LinkedIn</a>
-                      </div>
-                  </div>
-             </div>
-         </div>
-     </div>
+        <div class="signature">
+            Best regards, 
+            <div class="signature-name">Mike Akey</div>
+        </div>
+    </div>
     
-         <script>
-         // Add current date
-         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-         const currentDate = new Date().toLocaleDateString('en-US', options);
-         document.getElementById('current-date').textContent = currentDate;
-     </script>
 </body>
-</html> 
+</html>
